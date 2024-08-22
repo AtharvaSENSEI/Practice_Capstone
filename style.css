@@ -1,0 +1,117 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.game--container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 306px;
+  margin: 50px auto;
+  gap: 5px; /* Adds space between the cells */
+}
+
+.cell {
+  font-family: "Permanent Marker", cursive;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 0 1px #333333;
+  border: 1px solid #333333;
+  cursor: pointer;
+  line-height: 100px;
+  font-size: 60px;
+  text-align: center;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cell:hover {
+  background-color: #e0e0e0;
+}
+
+.cell:active {
+  background-color: #d1d1d1;
+}
+
+.cell.x {
+  color: #ff6347; /* Tomato red for X */
+}
+
+.cell.o {
+  color: #4682b4; /* Steel blue for O */
+}
+
+/* Add a heading style */
+h1 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 3rem;
+  color: #333333;
+  margin: 20px 0;
+}
+
+/* Style the status display */
+.status--display {
+  font-size: 1.5rem;
+  color: #555555;
+  margin-top: 10px;
+}
+
+/* Add a button style for reset or start */
+button {
+  font-family: "Arial", sans-serif;
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: #333333;
+  color: #ffffff;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #555555;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Responsive design */
+@media (max-width: 400px) {
+  .game--container {
+    width: 90%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cell {
+    width: 90px;
+    height: 90px;
+    font-size: 50px;
+    line-height: 90px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .status--display {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}
